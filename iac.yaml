@@ -1,4 +1,9 @@
 - name: Create Azure VM
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise Subscription – MPN(9e4cf206-a217-409f-8288-4d4852b4a323)'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   hosts: localhost
   connection: local
   tasks:
