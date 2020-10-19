@@ -25,7 +25,7 @@
       is_linux: true
       sku: S1
       number_of_workers: 1
-  - name: Create a windows web app with node, php
+  - name: Create a linux web app with Node 6.6 framework
     azure_rm_webapp:
       resource_group: rg-RishiK
       name: WebApp-RishiK
@@ -36,6 +36,4 @@
         testkey: testvalue
       frameworks:
         - name: "node"
-          version: 6.6
-        - name: "php"
-          version: "7.0"
+          version: "6.6"
